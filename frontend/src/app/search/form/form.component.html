@@ -1,0 +1,70 @@
+<div class="card mb-3" [formGroup]="form">
+  <div class="card-header">
+    <span class="oi oi-eye"></span>
+    Search
+  </div>
+  <div class="card-body">
+    <div class="form-group">
+      <label for="location">
+        <span class="oi oi-globe"></span>
+        Location
+      </label>
+      <input type="text" class="form-control" id="location" placeholder="Edinburgh" formControlName="location">
+    </div>
+
+    <div class="form-group">
+      <label for="programmes">
+        <span class="oi oi-book"></span>
+        Programmes on Offer
+      </label>
+      <input type="text" class="form-control" id="programmes" placeholder="Computer Science" formControlName="programmes">
+    </div>
+
+    <div class="form-group">
+      <label for="employmentChances">
+        <span class="oi oi-briefcase"></span>
+        Employment Chances ({{form.value.employmentChances}}%)
+      </label>
+      <input type="range" class="form-control-range" id="employmentChances" formControlName="employmentChances">
+    </div>
+
+    <div class="form-group">
+      <label for="teachingExcellence">
+        <span class="oi oi-beaker"></span>
+        Teaching Excellence
+      </label>
+      <select class="form-control" id="teachingExcellence" formControlName="teachingExcellence">
+        <option value="all">All</option>
+        <option value="bronze">Bronze</option>
+        <option value="silber">Silber</option>
+        <option value="gold">Gold</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="graduationRates">
+        <span class="oi oi-graph"></span>
+        Graduation Rates ({{form.value.graduationRates}}%)
+        <a href="" ngbTooltip="The graduation rate gives a rough overview about how likely it is to graduate.">
+          <span class="oi oi-question-mark"></span>
+          Help
+        </a>
+      </label>
+      <input type="range" class="form-control-range" id="graduationRates" formControlName="graduationRates">
+    </div>
+
+    <div class="form-group">
+      <label for="qualityOfLive">
+        <span class="oi oi-home"></span>
+        Quality of Life ({{form.value.qualityOfLive}}%)
+      </label>
+      <input type="range" class="form-control-range" id="qualityOfLive" formControlName="qualityOfLive">
+    </div>
+
+    <button class="btn btn-success btn-block" (click)="search()">
+      <span class="oi oi-check"></span>
+      Search
+    </button>
+  </div>
+</div>
+

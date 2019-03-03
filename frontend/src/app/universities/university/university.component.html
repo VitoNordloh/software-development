@@ -1,0 +1,41 @@
+<a class="btn btn-primary mb-3" routerLink="/search">
+  <span class="oi oi-arrow-left"></span>
+  Back to Results
+</a>
+
+<div *ngIf="university$ | async; let university" class="card card-default">
+  <div class="card-header">
+    <div class="row justify-content-between">
+      <div>
+        <span class="badge badge-warning">
+          <span class="oi oi-badge"></span>
+          {{university.rating}}
+        </span>
+        {{university.name}}
+      </div>
+      <span>
+        <span class="oi oi-map-marker"></span>
+        {{university.location}}
+      </span>
+    </div>
+  </div>
+  <div class="card-body">
+    <p>{{university.description}}</p>
+
+    Employment Chances
+    <ngb-progressbar [showValue]="true" type="primary" [value]="university.employmentChances"></ngb-progressbar>
+
+    Graduation Rates
+    <ngb-progressbar [showValue]="true" type="primary" [value]="university.graduationRates"></ngb-progressbar>
+
+    Quality of Life
+    <ngb-progressbar [showValue]="true" type="primary" [value]="university.qualityOfLife"></ngb-progressbar>
+
+    Teaching Excellence
+    <div>
+      <span class="oi oi-star" [ngClass]="{'text-warning': university.teachingExcellence !== 'all'}"></span>
+      <span class="oi oi-star" [ngClass]="{'text-warning': university.teachingExcellence == 'silber' || university.teachingExcellence == 'gold'}"></span>
+      <span class="oi oi-star" [ngClass]="{'text-warning': university.teachingExcellence == 'gold'}"></span>
+    </div>
+  </div>
+</div>

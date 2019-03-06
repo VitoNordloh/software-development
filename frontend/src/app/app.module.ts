@@ -10,6 +10,8 @@ import {ReactiveFormsModule} from '@angular/forms';
 import { ResultListComponent } from './search/result-list/result-list.component';
 import { UniversityComponent } from './universities/university/university.component';
 import {HttpClientModule} from "@angular/common/http";
+import { DataComponent } from './data/data.component';
+import { CourseComponent } from './course/course/course.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import {HttpClientModule} from "@angular/common/http";
     SearchComponent,
     FormComponent,
     ResultListComponent,
-    UniversityComponent
+    UniversityComponent,
+    DataComponent,
+    CourseComponent
   ],
   imports: [
     BrowserModule,

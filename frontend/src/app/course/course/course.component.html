@@ -1,0 +1,70 @@
+<div class="card card-default mb-3">
+  <div class="card-header">
+    <div class="row justify-content-between">
+      <span>
+        <span class="oi oi-bookmark"></span>
+        {{course.title}}
+      </span>
+      <div>
+        <span class="badge badge-warning">
+          <span class="oi oi-badge"></span>
+          {{course.rating | number: '1.2-2'}}
+        </span>
+      </div>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="row">
+      <div class="col-4">
+        <span class="oi oi-map-marker"></span> University
+      </div>
+      <div class="col-8">
+        {{course.university.name}}
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-4">
+        <span class="oi oi-document"></span> Awarded Degree
+      </div>
+      <div class="col-8">
+        {{course.academicTitle}}
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-4">
+        <span class="oi oi-timer"></span> Mode
+      </div>
+      <div class="col-8">
+        <span *ngIf="course.mode == 1">Full-time</span>
+        <span *ngIf="course.mode == 2">Part-time</span>
+        <span *ngIf="course.mode == 0">both</span>
+      </div>
+    </div>
+
+    <span class="oi oi-briefcase"></span>
+    Employment Chances
+    <ngb-progressbar [showValue]="true" type="primary" [value]="course.employmentChances"></ngb-progressbar>
+
+    <span class="oi oi-graph"></span>
+    First Class Rate
+    <ngb-progressbar [showValue]="true" type="primary" [value]="course.firstClassRate"></ngb-progressbar>
+
+    <span class="oi oi-home"></span>
+    Quality of Life
+    <ngb-progressbar [showValue]="true" type="primary" [value]="course.qualityOfLife"></ngb-progressbar>
+
+    <span class="oi oi-beaker"></span>
+    Teaching Excellence
+    <div>
+      <span class="oi oi-star" [ngClass]="{'text-warning': course.university.teachingExcellence >= 1}"></span>
+      <span class="oi oi-star" [ngClass]="{'text-warning': course.university.teachingExcellence >= 2}"></span>
+      <span class="oi oi-star" [ngClass]="{'text-warning': course.university.teachingExcellence >= 3}"></span>
+    </div>
+  </div>
+  <div class="card-footer" *ngIf="showFooter">
+    <a routerLink="/universities/{{course.pubukprn}}" class="btn btn-sm btn-primary">
+      <span class="oi oi-eye"></span>
+      Go to University
+    </a>
+  </div>
+</div>

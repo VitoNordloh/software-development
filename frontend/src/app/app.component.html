@@ -13,6 +13,12 @@
                 </a>
             </li>
             <li class="nav-item">
+                <a class="nav-link" routerLink="/data">
+                    <span class="oi oi-pie-chart"></span>
+                    Data
+                </a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link disabled" href="#">
                     <span class="oi oi-account-login"></span>
                     Log in
@@ -30,8 +36,40 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-12">
+        <div class="col-lg-3">
+            <div class="card sticky-top">
+                <div class="card-header">
+                    <span class="oi oi-info"></span>
+                    Help
+                </div>
+                <div class="card-body">
+                    <p>Just enter some criteria you are interested in and hit the search button!</p>
+                    <p>
+                        In the result list the courses which match your criteria are shown.
+                        In order to gain more information about the universities, like other
+                        courses which are offered, click the "Go to University" button.
+                    </p>
+                    <p>
+                        For some universities some attributes, like the First Class Rate, are not available.
+                        For example, the University of Edinburgh cannot be found if the First Class Rate is
+                        set to a value large than 0.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
             <router-outlet></router-outlet>
+        </div>
+        <div class="col-lg-3">
+            <div class="card sticky-top">
+                <div class="card-header">
+                    <span class="oi oi-image"></span>
+                    Lorem Ipsum
+                </div>
+                <div class="card-body">
+                    This place can be used for further information.
+                </div>
+            </div>
         </div>
     </div>
 </div>

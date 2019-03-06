@@ -6,19 +6,21 @@ import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-university',
-  templateUrl: './university.component.html',
-  styleUrls: ['./university.component.scss']
+  templateUrl: './university.component.html'
 })
 export class UniversityComponent implements OnInit {
-  private university$: Observable<any>;
+  university$: Observable<any>;
+
+  page = 0;
+  pageSize = 5;
+  maxSize = 5;
 
   constructor(private route: ActivatedRoute, private api: ApiService) {}
 
   ngOnInit() {
     this.university$ = this.route.paramMap.pipe(
         switchMap((params: ParamMap) => {
-          console.log('Fetching', params.get('id'));
-          return this.api.get(parseInt(params.get('id'), 10));
+          return this.api.getUniversity(parseInt(params.get('id'), 10));
         })
     );
   }

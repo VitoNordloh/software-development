@@ -2,13 +2,12 @@ import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-search-result-list',
-  templateUrl: './result-list.component.html',
-  styleUrls: ['./result-list.component.scss']
+  templateUrl: './result-list.component.html'
 })
-export class ResultListComponent implements OnInit {
-  @Input() private results: any[];
+export class ResultListComponent {
+  @Input() results: any[];
 
-  constructor() {}
-
-  ngOnInit() {}
+  page = 0;
+  pageSize = 5;
+  maxSize = 5;
 }

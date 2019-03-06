@@ -3,22 +3,21 @@ import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-search-form',
-  templateUrl: './form.component.html',
-  styleUrls: ['./form.component.scss']
+  templateUrl: './form.component.html'
 })
 export class FormComponent {
-  @Output() private searched = new EventEmitter<any>();
+  @Output() searched = new EventEmitter<any>();
 
-  private form = new FormGroup({
-    location: new FormControl(''),
-    programmes: new FormControl(''),
-    employmentChances: new FormControl(10),
-    teachingExcellence: new FormControl('all'),
-    graduationRates: new FormControl(10),
-    qualityOfLive: new FormControl(10)
+  form = new FormGroup({
+    university: new FormControl(''),
+    title: new FormControl(''),
+    employmentChances: new FormControl(0),
+    teachingExcellence: new FormControl(0),
+    firstClassRate: new FormControl(0),
+    qualityOfLife: new FormControl(0)
   });
 
-  private search() {
+  search() {
     this.searched.emit(this.form.value);
   }
 }

@@ -5,19 +5,19 @@
   </div>
   <div class="card-body">
     <div class="form-group">
-      <label for="location">
+      <label for="university">
         <span class="oi oi-globe"></span>
-        Location
+        University
       </label>
-      <input type="text" class="form-control" id="location" placeholder="Edinburgh" formControlName="location">
+      <input type="text" class="form-control" id="university" placeholder="University of Edinburgh" formControlName="university">
     </div>
 
     <div class="form-group">
-      <label for="programmes">
+      <label for="title">
         <span class="oi oi-book"></span>
-        Programmes on Offer
+        Programme Title
       </label>
-      <input type="text" class="form-control" id="programmes" placeholder="Computer Science" formControlName="programmes">
+      <input type="text" class="form-control" id="title" placeholder="Computer Science" formControlName="title">
     </div>
 
     <div class="form-group">
@@ -34,31 +34,31 @@
         Teaching Excellence
       </label>
       <select class="form-control" id="teachingExcellence" formControlName="teachingExcellence">
-        <option value="all">All</option>
-        <option value="bronze">Bronze</option>
-        <option value="silber">Silber</option>
-        <option value="gold">Gold</option>
+        <option [ngValue]="0">All</option>
+        <option [ngValue]="1">Bronze</option>
+        <option [ngValue]="2">Silber</option>
+        <option [ngValue]="3">Gold</option>
       </select>
     </div>
 
     <div class="form-group">
       <label for="graduationRates">
         <span class="oi oi-graph"></span>
-        Graduation Rates ({{form.value.graduationRates}}%)
-        <a href="" ngbTooltip="The graduation rate gives a rough overview about how likely it is to graduate.">
+        First Class Rate ({{form.value.firstClassRate}}%)
+        <a href="" ngbTooltip="The first class rate is the proportion of students, who obtained a first class degree.">
           <span class="oi oi-question-mark"></span>
           Help
         </a>
       </label>
-      <input type="range" class="form-control-range" id="graduationRates" formControlName="graduationRates">
+      <input type="range" class="form-control-range" id="graduationRates" formControlName="firstClassRate">
     </div>
 
     <div class="form-group">
-      <label for="qualityOfLive">
+      <label for="qualityOfLife">
         <span class="oi oi-home"></span>
-        Quality of Life ({{form.value.qualityOfLive}}%)
+        Quality of Life ({{form.value.qualityOfLife}}%)
       </label>
-      <input type="range" class="form-control-range" id="qualityOfLive" formControlName="qualityOfLive">
+      <input type="range" class="form-control-range" id="qualityOfLife" formControlName="qualityOfLife">
     </div>
 
     <button class="btn btn-success btn-block" (click)="search()">

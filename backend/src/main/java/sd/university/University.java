@@ -1,13 +1,13 @@
 package sd.university;
 
+import sd.course.Course;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class University {
-    public int id = 0;
+    public int ukprn;
     public String name = "";
-    public double rating = 0;
-    public String location = "";
-    public String description = "";
-    public double employmentChances = 0;
-    public double graduationRates = 0;
-    public double qualityOfLife = 0;
-    public String teachingExcellence = "";
+    public int teachingExcellence = 0;
+    public List<Course> courses = new ArrayList<>();
 }

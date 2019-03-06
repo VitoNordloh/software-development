@@ -2,21 +2,21 @@ package sd.search;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import sd.university.University;
-import sd.university.UniversityRepository;
+import sd.course.Course;
+import sd.course.CourseRepository;
 
 import java.util.List;
 
 @Service
 public class SearchService {
-    private UniversityRepository universities;
+    private CourseRepository courses;
 
     @Autowired
-    public SearchService(UniversityRepository universities) {
-        this.universities = universities;
+    public SearchService(CourseRepository courses) {
+        this.courses = courses;
     }
 
-    public List<University> search(SearchCriteria searchCriteria) {
-        return universities.findByCriteria(searchCriteria);
+    public List<Course> search(SearchCriteria searchCriteria) {
+        return courses.findByCriteria(searchCriteria);
     }
 }

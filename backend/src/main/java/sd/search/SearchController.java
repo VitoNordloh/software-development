@@ -2,10 +2,9 @@ package sd.search;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import sd.university.University;
+import sd.course.Course;
 
 import java.util.List;
-
 
 @RestController
 public class SearchController {
@@ -17,7 +16,7 @@ public class SearchController {
     }
 
     @PostMapping("/search")
-    public List<University> search(@RequestBody SearchCriteria searchCriteria) {
+    public List<Course> search(@RequestBody SearchCriteria searchCriteria) {
         return service.search(searchCriteria);
     }
 }

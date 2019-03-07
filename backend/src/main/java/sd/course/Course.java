@@ -6,7 +6,8 @@ public class Course {
     public int pubukprn;
     public int mode;
     public String courseid;
-    public double rating = 5;
+    public String url;
+    public double rating = 0;
     public String title = "";
     public String location = "";
     public double employmentChances = 0;

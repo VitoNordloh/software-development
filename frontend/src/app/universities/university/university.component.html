@@ -10,6 +10,6 @@
   </h1>
 
   <ngb-pagination [maxSize]="maxSize" [(page)]="page" [pageSize]="pageSize" [collectionSize]="university.courses.length"></ngb-pagination>
-  <app-course [showFooter]="false" [course]="course" *ngFor="let course of university.courses | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize"></app-course>
+  <app-course [linkToUni]="false" [course]="course" *ngFor="let course of university.courses | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize"></app-course>
   <ngb-pagination [maxSize]="maxSize" [(page)]="page" [pageSize]="pageSize" [collectionSize]="university.courses.length"></ngb-pagination>
 </div>

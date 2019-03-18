@@ -6,5 +6,5 @@ import { Component, Input } from '@angular/core';
 })
 export class CourseComponent {
   @Input() course;
-  @Input() showFooter;
+  @Input() linkToUni;
 }

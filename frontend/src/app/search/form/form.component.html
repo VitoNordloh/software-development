@@ -23,7 +23,7 @@
     <div class="form-group">
       <label for="employmentChances">
         <span class="oi oi-briefcase"></span>
-        Employment Chances ({{form.value.employmentChances}}%)
+        Employment Chances (>= {{form.value.employmentChances}}%)
       </label>
       <input type="range" class="form-control-range" id="employmentChances" formControlName="employmentChances">
     </div>
@@ -31,7 +31,7 @@
     <div class="form-group">
       <label for="teachingExcellence">
         <span class="oi oi-beaker"></span>
-        Teaching Excellence
+        Minimum Teaching Excellence
       </label>
       <select class="form-control" id="teachingExcellence" formControlName="teachingExcellence">
         <option [ngValue]="0">All</option>
@@ -44,7 +44,7 @@
     <div class="form-group">
       <label for="graduationRates">
         <span class="oi oi-graph"></span>
-        First Class Rate ({{form.value.firstClassRate}}%)
+        First Class Rate (>= {{form.value.firstClassRate}}%)
         <a href="" ngbTooltip="The first class rate is the proportion of students, who obtained a first class degree.">
           <span class="oi oi-question-mark"></span>
           Help
@@ -56,7 +56,7 @@
     <div class="form-group">
       <label for="qualityOfLife">
         <span class="oi oi-home"></span>
-        Quality of Life ({{form.value.qualityOfLife}}%)
+        Quality of Life (>= {{form.value.qualityOfLife}}%)
       </label>
       <input type="range" class="form-control-range" id="qualityOfLife" formControlName="qualityOfLife">
     </div>

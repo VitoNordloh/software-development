@@ -9,8 +9,8 @@ import sd.course.CourseRepository;
 
 @RestController
 public class UniversityController {
-    private UniversityRepository universities;
-    private CourseRepository courses;
+    private transient UniversityRepository universities;
+    private transient CourseRepository courses;
 
     @Autowired
     public UniversityController(UniversityRepository universities, CourseRepository courses) {

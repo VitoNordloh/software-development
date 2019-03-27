@@ -8,7 +8,7 @@ import java.util.List;
 
 @RestController
 public class SearchController {
-    private SearchService service;
+    private transient SearchService service;
 
     @Autowired
     public SearchController(SearchService service) {

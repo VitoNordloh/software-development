@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CourseRepositoryImpl implements CourseRepositoryCustom {
-    private final MongoTemplate mongoTemplate;
+    private final transient MongoTemplate mongoTemplate;
 
     @Autowired
     public CourseRepositoryImpl(MongoTemplate mongoTemplate) {

@@ -9,7 +9,7 @@ import java.util.List;
 
 @Service
 public class SearchService {
-    private CourseRepository courses;
+    private transient CourseRepository courses;
 
     @Autowired
     public SearchService(CourseRepository courses) {

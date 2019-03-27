@@ -1,3 +1,4 @@
+/config/*.local
 .gradle
 .idea
 build

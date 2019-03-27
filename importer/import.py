@@ -2,7 +2,7 @@ import csv
 import pprint
 from pymongo import MongoClient
 
-mongo = MongoClient('mongodb://admin:guc3XK9drxmH3vhZ@sd-shard-00-00-gmjiq.mongodb.net:27017,sd-shard-00-01-gmjiq.mongodb.net:27017,sd-shard-00-02-gmjiq.mongodb.net:27017/test?ssl=true&replicaSet=SD-shard-0&authSource=admin&retryWrites=true')
+mongo = MongoClient('mongodb://user:password@sd-shard-00-00-gmjiq.mongodb.net:27017,sd-shard-00-01-gmjiq.mongodb.net:27017,sd-shard-00-02-gmjiq.mongodb.net:27017/test?ssl=true&replicaSet=SD-shard-0&authSource=admin&retryWrites=true')
 universities = mongo.test.university
 courses = mongo.test.course
 
